@@ -40,7 +40,8 @@ public class BooleanSearchEngine implements SearchEngine {
                     if (wordsOnPage.containsKey(word)) {
                         wordsOnPage.get(word).add(pageEntry);
                     }
-                    wordsOnPage.computeIfAbsent(word, l -> new ArrayList<>()).add(pageEntry);
+                    else {wordsOnPage.computeIfAbsent(word, l -> new ArrayList<>()).add(pageEntry);}
+
                 }
             }
         }
